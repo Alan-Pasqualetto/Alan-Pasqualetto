@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página com Div, Nav e Imagens</title>
+  <link rel="stylesheet" href="estilos1.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+<div id="cabecalho">
+  <div id="logo">
+    <a href="https://3oitaoimobiliaria.com.br/" title="Pagina Inicial">
+      <img src="img\Design.png" alt="3Oitao Imobiliaria">
+    </a>
+  </div>
+  <div id="header-content">
+    <h1>Imobiliária Três Oitão</h1>
+    <h3>Sua Casa è Nossa Satisfação</h3>
+  </div>
+  <div id="header-contato">
+    <ul>
+        <li><a><img src="img\correio-de-voz.png" alt="icone celular">  (66) 9 9999-9999</a></li>
+        <li><a href="https://maps.app.goo.gl/AscR814vSRcyAb476" title="Localizacao"><img src="img\localizacao.png" alt="icone localizacao">  Av. dos Ingás, 3001</a></li> 
+    </ul>
+</div>
+</div>
+
+  <!-- Navegação -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#galeria">Alugar</a></li>
+      <li><a href="#galeria">Comprar</a></li>
+	  <li><a href="#QuemSomos">Quem Somos</a></li>
+	  <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+ <!-- Seção de Conteúdo -->
+<div id="conteudo">
+  <h2>Imóveis em destaque</h2>
+  <div id="galeria">
+    <div id="imovel">
+      <img src="img/Atraia muito Dinheiro com a Lei da Atração (clique aqui) - Riqueza e Sucesso.jpg" alt="Imagem 1">
+      <div id="detalhes">
+        <h3>Casa Moderna</h3>
+        <p>Valor: R$ 500.000</p>
+        <p>Quartos: 3 | Salas: 2 | Cozinhas: 1 | Banheiros: 2</p>
+        <p>Descrição: Uma casa moderna com excelente localização e vista incrível.</p>
+      </div>
+    </div>
+    <div id="imovel">
+      <img src="img/Esta casa contemporânea promove o diálogo entre interior e exterior.jpg" alt="Imagem 2">
+      <div id="detalhes">
+        <h3>Casa Contemporânea</h3>
+        <p>Valor: R$ 750.000</p>
+        <p>Quartos: 4 | Salas: 2 | Cozinhas: 1 | Banheiros: 3</p>
+        <p>Descrição: Uma casa contemporânea que oferece conforto e estilo.</p>
+      </div>
+    </div>
+    <div id="imovel">
+      <img src="img/Porto Seguro Imóveis - Detalhes do imóvel (1).jpg" alt="Imagem 3">
+      <div id="detalhes">
+        <h3>Apartamento Luxo</h3>
+        <p>Valor: R$ 1.200.000</p>
+        <p>Quartos: 3 | Salas: 1 | Cozinhas: 1 | Banheiros: 2</p>
+        <p>Descrição: Apartamento de luxo no centro da cidade com excelente acabamento.</p>
+      </div>
+    </div>
+    <div id="imovel">
+      <img src="img/Porto Seguro Imóveis - Detalhes do imóvel.jpg" alt="Imagem 4">
+      <div id="detalhes">
+        <h3>Casa de Campo</h3>
+        <p>Valor: R$ 400.000</p>
+        <p>Quartos: 2 | Salas: 1 | Cozinhas: 1 | Banheiros: 1</p>
+        <p>Descrição: Uma casa de campo ideal para quem busca tranquilidade.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Seção Quem Somos -->
+<div id="QuemSomos">
+    <h2>Quem Somos</h2>
+	<h3>Imobiliaria Três Oitão</h3>
+    <p>A Trez oitao Imobiliária é uma empresa comprometida em transformar o mercado imobiliário através de um atendimento personalizado e eficiente. Atuamos com foco em proporcionar as melhores experiências na compra, venda, aluguel e administração de imóveis, sempre buscando atender às necessidades e sonhos de nossos clientes.</p>
+
+    <p>Com uma equipe experiente e qualificada, oferecemos soluções completas para quem deseja investir, alugar ou adquirir o imóvel ideal. Na Trez oitao, valorizamos a transparência, confiança e o profissionalismo em todas as etapas do processo. Nosso objetivo é garantir que cada negociação seja conduzida com segurança e excelência, oferecendo não apenas um imóvel, mas um lar.</p>
+
+    <p>Nossa missão é simplificar o mercado imobiliário e oferecer oportunidades únicas, com foco na satisfação de nossos clientes e parceiros.</p>
+	<img src="img\img1.png" alt="Img1" class="QuemSomos-img" id="img1">
+</div>
+
+  <!-- Seção de Contato -->
+<div id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco preenchendo o formulário abaixo:</p>
+        
+        <form action="/submit" method="GET">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Seu nome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="E-mail" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="assunto">Enteresse:</label>
+                <input type="text" id="assunto" placeholder="Interesse, compra ou alugar" name="assunto" required >
+            </div>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+  <!-- Rodapé -->
+	<footer>
+		<p>&copy; 2024 Imobiliária Trez oitao. Todos os direitos reservados.</p>
+		<p><a href="/politica-de-privacidade">Política de Privacidade</a></p>
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,409 @@
+/* Resetações e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Estrutura base de seções */
+#cabecalho, #conteudo, #contato, #rodape, #QuemSomos {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+#cabecalho {
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    position: relative;
+}
+
+/* Logo alinhado à esquerda */
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+#cabecalho a img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Contato alinhado à direita */
+#header-contato {
+    position: absolute;
+    top: 110px;
+    right: 20px;
+}
+
+#header-contato ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+#header-contato ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+#header-contato ul li a img {
+    max-width: 20px;
+    margin-right: 5px;
+}
+
+#header-content {
+    margin-top: 40px; 
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #cabecalho {
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    #logo {
+        position: relative; /* Remove a posição absoluta */
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+    }
+
+    #header-contato {
+        position: relative; 
+        top: 0;
+        right: 0;
+        margin-top: 10px; 
+        text-align: center; 
+        width: 100%; 
+    }
+
+    #header-contato ul {
+        flex-direction: column; 
+        gap: 10px; 
+        align-items: center;
+    }
+
+    #header-content {
+        margin-top: 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    #cabecalho a img {
+        max-width: 100px; 
+    }
+
+    #header-contato ul li a {
+        font-size: 12px; 
+    }
+
+    #header-contato ul li a img {
+        max-width: 15px; 
+    }
+}
+
+
+/* Navegação */
+nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+	justify-content: flex-start;
+    list-style: none;
+    gap: 20px;
+	padding-left: 110px;
+}
+
+nav ul li {
+    margin-right: 30px;
+    position: relative; /* Para posicionar a barra de destaque */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #103;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para a barra animada */
+nav ul li a:hover {
+    color: #f6accd; 
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #f6accd; 
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease; 
+}
+
+nav ul li a:hover::after {
+    width: 100%; 
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+		text-align: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        text-align: center;
+    }
+}
+
+/* Conteúdo */
+#conteudo h2 {
+    text-align: left;
+    color: black;
+}
+
+/* Estilos para a galeria */
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Estilo para os itens da galeria (imóveis) */
+#imovel {
+    width: 20%; 
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Imagem do imóvel */
+#imovel img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    padding: 10px 5px;
+}
+
+/* Detalhes do imóvel */
+#detalhes {
+    padding: 10px;
+}
+
+#detalhes h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+#detalhes p {
+    margin: 5px 0;
+    color: #666;
+}
+
+#detalhes p:first-of-type {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    #imovel {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 768px) {
+    #galeria {
+        justify-content: center; 
+    }
+
+    #imovel {
+        width: 90%;
+    }
+}
+
+/* Efeito de hover para os itens */
+#imovel:hover {
+    transform: scale(1.05); /* Aumenta o item um pouco ao passar o mouse */
+}
+
+/* Seção "Quem Somos" */
+#QuemSomos {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: justify;
+    overflow: hidden;
+}
+
+#QuemSomos h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Estilo para a seção Quem Somos */
+#QuemSomos {
+    position: relative; 
+    padding: 20px;
+	max-width: 1150px;
+    text-align: center;
+}
+#QuemSomos:hover {
+    transform: scale(1.05); /* Aumenta o item um pouco ao passar o mouse */
+}
+
+/* Estilo para o parágrafo */
+#QuemSomos p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+/* Estilo das imagens ovais */
+.QuemSomos-img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* Garante que a imagem cubra a área da forma oval sem distorção */
+    opacity: 0.7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra para destacar a imagem */
+}
+
+/* Posições das imagens dentro da seção */
+#img1 {
+    top: 12px; 
+    right: 8%; 
+}
+
+@media (max-width: 768px) {
+    /* Ajuste da posição e tamanho das imagens para telas menores */
+    .QuemSomos-img {
+        width: 80px;
+        height: 80px;
+        top: 12px;
+        right: 8%; /* Ajusta a posição para uma tela menor */
+    }
+
+    #QuemSomos p {
+        font-size: 16px; 
+        max-width: 100%;
+    }
+}
+/* Estilos para a seção de contato */
+#contato {
+    background-color: #f0f0f0; /* Cor de fundo acinzentada suave */
+    border-radius: 8px;
+    max-width: 600px; /* Ajusta a largura máxima do contêiner */
+    margin: 20px auto; /* Centraliza o contêiner horizontalmente */
+    padding: 20px; /* Adiciona algum espaçamento interno */
+    text-align: center; /* Alinha o texto ao centro */
+}
+#contato:hover {
+    transform: scale(1.05); /* Aumenta o item um pouco ao passar o mouse */
+}
+
+#contato h2 {
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens dentro do formulário */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens ao início */
+    width: 100%;
+    max-width: 500px; /* Define a largura máxima dos grupos de formulário */
+    margin-bottom: 15px; /* Espaçamento entre os grupos de formulário */
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Inclui o padding e a borda na largura total do campo */
+}
+
+button[type="submit"] {
+    background-color: #ee3337;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #cc2a2b;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #f6accd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
